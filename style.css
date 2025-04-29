@@ -1,0 +1,421 @@
+/* Estilo geral */
+
+* {
+    margin: 0; /*Define a distância entre o elemento e outros elementos ao seu redor (externo)*/
+    padding: 0; /*Define a distância entre o conteúdo do elemento (como texto ou imagens) e sua borda (interno)*/
+    box-sizing: border-box; /*Determina como o tamanho total de um elemento é calculado. O valor mais comum é border-box, que inclui o padding e as bordas no cálculo da largura e altura do elemento, o que facilita a criação de layouts mais previsíveis*/
+}
+
+body {
+    background-color: black;
+    height: 100vh; /*Define a altura de um elemento: a unidade vh, faz com que seja relativa a altura da janela de vizualização*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.interface {
+    max-width: 1280px; /*Define a largura máxima que um elemento pode ter*/
+    margin: 0 auto; /*0 define as margens superior e inferior, auto define as margens laterais fazendo com que o navegador distribua o espaço igualmente*/
+}
+
+.flex {
+    display: flex; /*define o comportamento de renderização do elemento e como ele interage com outros elementos ao seu redor, flex permite o alinhamento e a distribuição de seus itens internos de forma eficiente*/
+}
+
+.btn-contato button {
+    padding: 10px 40px; /*10px em altura, 40px em comprimento*/
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #1ecbe1;
+    border: 0; /*0 remove bordas no elemento*/
+    border-radius: 30px; /*deixa a borda arredondada*/
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+h2.titulo span {
+    color: #1ecbe1;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px  #1ecbe1;
+    transform: scale(1.05);
+}
+
+/* Estilo cabeçalho */
+
+header div.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center; /*Alinha os itens ao longo do eixo transversal (vertical por padrão)*/
+    justify-content: space-between; /*Alinha os itens ao longo do eixo principal (horizontal por padrão), space between: Distribui os itens com espaço igual entre eles*/
+}
+
+header a {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu a:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+header nav.menu ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* Estilo mobile */
+.btn-abrir-menu i {
+    color: #1ecbe1;
+    font-size: 40px;
+}
+.menu-mobile {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #1ecbe1;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: inline-block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: gray;
+    color: white;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* Estilo topo do site */
+
+section .topo-do-site {
+    padding: 40px 4%;
+}
+
+section .topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /*é usada para definir o espaço entre itens dentro de um container flexível ou de uma grade*/
+}
+
+.txt-topo-site h1 {
+    color: white;
+    font-size: 48px;
+    line-height: 50px;
+    margin-top: 70px;
+}
+
+.txt-topo-site h1 span {
+    color: #1ecbe1;
+}
+
+.txt-topo-site p {
+    color: white;
+    margin: 40px 0;
+    font-size: 22px;
+}
+
+.img-topo-site img {
+    border-radius: 200px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate; /*2s: fica ativa por este tempo. ease-in-out: define o estilo. infinite: animação infinita. alternate: faz com que a animação vá e volte.*/
+}
+
+@keyframes flutuar { /*criação de animação*/
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* Estilo conhecimentos */
+
+section.conhecimento {
+    padding: 40px 4%;
+}
+
+section.conhecimento .flex {
+    gap: 60px;
+    justify-content: center;
+}
+
+.conhecimento .conhecimento-box {
+    color: white;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.conhecimento .conhecimento-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #1ecbe1;
+}
+
+.conhecimento .conhecimento-box i {
+    font-size: 70px;
+    color: #1ecbe1;
+}
+
+.conhecimento .conhecimento-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Estilo sobre */
+
+section.sobre {
+    padding: 70px 4%;
+}
+
+.sobre .txt-sobre {
+    color: white;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+section.sobre .img-sobre img {
+    border-radius: 10px;
+}
+
+section.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+section.sobre .txt-sobre h2 span {
+    color: #1ecbe1;
+    display: block;
+}
+
+section.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1ecbe1;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* Estilo cursos em andamento */
+
+section.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.cursos {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    margin: 10px;
+}
+
+.cursos h3 {
+    color: #1ecbe1;
+    margin-top: 0;
+}
+
+.cursos p {
+    color: white;
+    margin-top: 10px;
+}
+
+.cursos:hover {
+    transform: scale(1.02);
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+/* Estilo footer */
+
+footer {
+    padding: 60px 4%;
+}
+
+footer .flex {
+    justify-content: center;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid gray;
+}
+
+footer .line-footer p i{
+    color: #1ecbe1;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: white;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1020px) {
+    /* Gerais */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .topo-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    /* Cabeçalho */
+    .menu, .btn-contato{
+        display: none;
+    }
+
+    /* Topo do site */
+    section.topo-site .flex {
+        gap: 40px;
+    }
+
+    section.topo-site {
+        padding: 20px 8%;
+    }
+
+    .topo-site h1 {
+        font-size: 30px;
+    }
+
+    .topo-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /* conhecimento */
+    section.conhecimento {
+        padding: 40px 8%;
+    }
+
+    /* Sobre */
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* Portfólio */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex {
+        gap: 50px;
+    }
+
+    /* Rodapé */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+}
