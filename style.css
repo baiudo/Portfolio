@@ -311,8 +311,9 @@ footer {
     padding: 60px 4%;
 }
 
-footer .flex {
-    justify-content: center;
+foorter .flex {
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer .line-footer {
@@ -330,6 +331,10 @@ footer .line-footer p i{
 
 footer .line-footer p a {
     color: white;
+}
+
+footer .line-footer div {
+    justify-content: space-around;
 }
 
 /* Responsividade */
