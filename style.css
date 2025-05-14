@@ -132,6 +132,10 @@ header nav ul li {
     text-align: flex-end;
 }
 
+.menu-mobile nav ul li {
+    text-align: right;
+}
+
 .menu-mobile nav ul li a {
     color: white;
     font-size: 20px;
