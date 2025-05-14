@@ -95,6 +95,7 @@ header nav ul li {
 .btn-abrir-menu i {
     color: #1ecbe1;
     font-size: 40px;
+    display: none;
 }
 .menu-mobile {
     background-color: black;
@@ -105,6 +106,15 @@ header nav ul li {
     z-index: 99999;
     width: 0%;
     overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
 }
 
 .menu-mobile .btn-fechar {
@@ -392,8 +402,8 @@ footer .line-footer div {
         text-align: center;
     }
 
-    .btn-social {
-        text-align: center;
+    .btn-abrir-menu i{
+        display: block;
     }
 
     .img-sobre img{
