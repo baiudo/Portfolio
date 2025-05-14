@@ -127,7 +127,9 @@ header nav ul li {
 }
 
 .menu-mobile nav ul {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    text-align: flex-end;
 }
 
 .menu-mobile nav ul li a {
@@ -139,8 +141,8 @@ header nav ul li {
 }
 
 .menu-mobile nav ul li a:hover {
-    background-color: gray;
-    color: white;
+    background-color: #1ecbe1;
+    color: black;
 }
 
 .overlay-menu {
